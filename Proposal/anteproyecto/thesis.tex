@@ -1,0 +1,47 @@
+\documentclass[12pt]{gatechthesis}
+
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% preamble
+
+\title{Incidencia de la Inteligencia Artificial Generativa en Sistemas de Tutores Inteligentes}
+\author{Jairo Vladimir Tamayo Ramírez}
+\approvaldate{Diciembre 16, 2024}
+\school{Universidad del Rosario}
+\department{Escuela de Ingeniería Ciencia y Tecnología}
+\degree{Magister en Ingeniería, Ciencia y Tecnología} 
+\bibliography{references}
+
+% document body
+\begin{document}
+
+\makeTitlePage{Diciembre}{2024}
+\input{approvalPage.tex}
+\makeEpigraph{¡Oh matemáticas santas, ojalá podáis, por vuestro comercio perpetuo, consolar el resto de mis días de la maldad del hombre y de la injusticia del Gran Todo}{Lautréamont}
+% \makeDedication{For my cousin Kara}
+
+\begin{frontmatter}
+    % \input{acknowledgments}
+    \makeTOC
+    \makeListOfTables
+    \makeListOfFigures
+    \input{abbrevs}
+    \input{summary}
+\end{frontmatter}
+
+\begin{thesisbody}
+    \input{chapters/chapter1}
+    \input{chapters/chapter2}
+    \input{chapters/chapter3}
+    \input{chapters/chapter4}
+    \input{chapters/chapter5}
+    \input{chapters/chapter6}
+    \input{chapters/chapter7}
+    % \input{chapters/appendix.tex}
+    \makeBibliography
+    % \input{vita}
+\end{thesisbody}
+
+\end{document}

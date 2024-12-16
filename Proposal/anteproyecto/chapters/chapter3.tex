@@ -1,0 +1,50 @@
+
+\chapter{Estado del Arte}
+
+\section{Control Adaptativo del Pensamiento—Racional (ACT* y ACT-R)}
+
+La investigación de tutores inteligentes se considera \cite{Anderson_act_1990}  como un dominio de la arquitectura cognitiva ACT-R la cual sirve para modelar los procesos de aprendizaje permitiendo su optimización. En esta arquitectura se establecen los siguientes modelos:
+
+Modelo de Desempeño: Este modelo representa un marco de reglas estructuradas que estipulan la correcta o incorrecta implementación de estrategias para el desarrollo óptimo de habilidades específicas.
+
+Modelo de Seguimiento: Compara en tiempo real entre las reglas ejecutadas por el estudiante y aquellas codificadas en el modelo de desempeño. Su objetivo es monitorear y analizar los estados cognitivos que atraviesa el estudiante durante la resolución de problemas.
+
+Modelo de Aprendizaje: Constituye un conjunto de hipótesis que postulan el modo en que el conocimiento del estudiante se transforma tras cada interacción o paso dado en la resolución de un problema, reflejando una evolución en su estado cognitivo.
+
+Seguimiento del conocimiento: Rastrea los cambios en el conocimiento del estudiante a medida que resuelve problemas. Lo que se obtiene de este seguimiento sirve para desambiguar interpretaciones en el modelo de seguimiento y puede usarse para seleccionar mejores problemas y optimizar el proceso de aprendizaje.
+
+Uno de los supuestos más importantes dentro de esta teoría es la distinción entre el conocimiento declarativo, que es aquel que se almacena en la memoria humana cuando realizamos una lectura, recibimos instrucciones o nos informamos de un hecho, y el conocimiento procedimental, que se obtiene a partir del primero a través de la práctica. Este conocimiento se representa mediante reglas de producción que definen una habilidad. La idea central de una tutoría es crear experiencias que permitan al estudiante adquirir dichas reglas por ejemplo:
+
+\begin{lstlisting}
+if goal = "goal description"
+then [action1, action2, ..., actionN]
+\end{lstlisting}
+
+El proceso para elegir reglas de producción opera bajo la lógica \cite{Taatgen2005ACT-R}, asociado a cada regla de producción hay un valor numérico que se denomina utilidad, el cual se calcula considerando el costo estimado y la probabilidad de éxito al emplear dicha regla para alcanzar un objetivo. En el contexto de ACT-R, el costo se mide en términos de tiempo. A través de la experiencia, ACT-R ajusta los parámetros que determinan la utilidad. Entre varias reglas de producción que podrían aplicarse a un objetivo particular, se escoge aquella con la mayor utilidad. Las decisiones en las memorias declarativa y procedimental se toman evaluando ciertos criterios, como la activación o la utilidad. Este mecanismo de selección no es perfecto y deja margen para algún grado de azar; por lo tanto, la opción de mayor valor tiene más posibilidades de ser escogida pero no es la única posible. Aunque este sistema puede generar errores o comportamientos no ideales, facilita la exploración de conocimientos y estrategias en desarrollo.
+
+La teoría detrás de ACT-R se ha implementado en el software de ACT-R. Este software se puede obtener ya sea como un programa de aplicación o en forma de código fuente.
+
+\section{Modelado Basados en Restricciones (MBR)}
+
+El MBR se basa en la representación del conocimiento de un dominio específico como un conjunto de restricciones \cite{Mitrovic2011CBM} que pueden usarse para analizar las respuestas del estudiante y determinar si contienen errores, lo cual permite proveer mensajes de retroalimentación y guía. Al basarse en conjuntos de restricciones, puede llegar a ser dispendioso cubrir todas aquellas que determinan la corrección de una respuesta, por lo que se hace necesario incluir reglas problemáticas que no funcionan bien dentro del modelo. La representación se fundamenta en un conjunto de principios que toda respuesta válida debe seguir, ya que no se considera necesario representar restricciones que permitan identificar errores específicos. Los conjuntos de reglas siguen el siguiente patrón:
+
+\begin{lstlisting}
+if relevance_condition is true, (Cr)
+then satisfaction_condition had better also be true (Cs)
+\end{lstlisting}
+
+Cada restricción consta de un par ordenado $C_r, C_s)$, donde $C_r$ es la condición que determina si la restricción es aplicable a la respuesta del estudiante y, en caso de serlo, continúa con la condición de satisfacción $C_s$, que comprueba si la respuesta es correcta. Como se puede apreciar, si la condición de relevancia $C_r$ no se cumple de manera inmediata, la respuesta se evalúa como incorrecta. Como cada restricción está asociada a un principio, el tutor puede proveer una retroalimentación basada en cuál fue violado. Es importante hacer la distinción entre reglas de producción (ACT-R) y restricciones, ya que las primeras tienen una naturaleza generativa, mientras que las segundas sirven para evaluar.
+
+Al igual que ACT-R, el MBR asume que existe un conocimiento procedimental que está asociado a la generación de acciones y uno declarativo que es con el que inicia el proceso de aprendizaje y sirve para evaluar las acciones ejecutadas. Como ya se debe intuir en este punto dependiendo del dominio la cantidad de restricciones puede ser significativa y debe contemplar una gran cantidad de posibles respuestas de los estudiantes 
+
+Usando los principios estipulados por el MBR se han creado varios tutores inteligentes como:
+
+\begin{itemize}
+  \item SQL-Tutor: Enseñanza de lenguaje SQL para manejo de bases de datos
+  \item EER-Tutor: Tutor enfocado en el aprendizaje del modelamiento de bases de datos tipo entidad relación
+  \item COLLECT-UML: Tutor para el diseño colaborativo de diagramas UML
+\end{itemize}
+
+\section{Integración de LLMs en Tutores Inteligentes}
+
+\section{Simulación de Aulas de clase Mediante el uso de Agentes}

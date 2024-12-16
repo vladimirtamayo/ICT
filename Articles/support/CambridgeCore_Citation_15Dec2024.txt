@@ -1,0 +1,1 @@
+@inbook{Taatgen_Lebiere_Anderson_2005, place={Cambridge}, title={Modeling Paradigms in ACT-R}, booktitle={Cognition and Multi-Agent Interaction: From Cognitive Modeling to Social Simulation}, publisher={Cambridge University Press}, author={Taatgen, Niels and Lebiere, Christian and Anderson, John}, editor={Sun, RonEditor}, year={2005}, pages={29–52}} <div></div>
